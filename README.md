@@ -1,4 +1,43 @@
-# Thank you for purchasing an Official Bootstrap Theme <3 #
+# Site Content Editing #
+Use these gulp commands when working on content (not bootstrap theme).
+
+## Edit Preview ##
+```
+$ gulp preview
+```
+## Publish Preivew ##
+
+Run this command to preview a final version before pushing up to AWS. This command will copy all html, css, and js and then run a server to preview. Use this command to do a final check before going live.
+
+```
+$ gulp publish-preview
+```
+
+## Publish To AWS ##
+
+Run this command to copy all production files to  
+
+```
+$ gulp publish
+```
+
+# Theme Editing #
+Use these commands when working on the theme of the site.
+
+Run this command to minify css and js and copy to dist folder.
+
+```
+$ gulp build
+```
+
+Run this command if you want realtime minification for editing purposes
+
+```
+$ gulp watch
+```
+
+
+# More Bootstrap Theme Instructions #
 
 Within your Bootstrap Theme you’ll find the following directories and files, grouping common resources and providing both compiled and minified distribution files, as well as raw source files.
 
