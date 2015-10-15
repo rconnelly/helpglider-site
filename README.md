@@ -1,7 +1,9 @@
 # Site Content Editing #
 Use these gulp commands when working on content (not bootstrap theme).
 
-## Edit Preview ##
+## Dev Preview ##
+Previews content that is being worked on. Useful when you are working on the site's content. 
+
 ```
 $ gulp preview
 ```
