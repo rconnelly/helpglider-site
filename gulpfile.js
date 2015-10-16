@@ -1,5 +1,6 @@
 var gulp         = require('gulp');
 var path         = require('path');
+var fs           = require('fs');
 var less         = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps   = require('gulp-sourcemaps');
@@ -9,8 +10,10 @@ var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
 var connect      = require('gulp-connect');
 var open         = require('gulp-open');
-// https://www.npmjs.com/package/gulp-awspublish
-var awspublish   = require('gulp-awspublish');
+// https://www.npmjs.com/package/gulp-s3
+var s3 = require("gulp-s3");
+//var tar  = require('gulp-tar');
+//var gzip = require('gulp-gzip');
 
 var Paths = {
   HERE                 : './',
@@ -18,6 +21,8 @@ var Paths = {
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
   LESS_TOOLKIT_SOURCES : './less/toolkit*',
   LESS                 : './less/**/**',
+  DEPLOY               :  'public',
+  DIST_DEPLOY          :  'public/dist',
   JS                   : [
       './js/bootstrap/transition.js',
       './js/bootstrap/alert.js',
@@ -32,27 +37,64 @@ var Paths = {
       './js/bootstrap/scrollspy.js',
       './js/bootstrap/tab.js',
       './js/custom/*'
-    ]
+    ],
+  FILES                 : [
+    '*.html',
+    './'
+  ]
 };
 
-gulp.task('default', ['less-min', 'js-min']);
+// Runs a preview
+gulp.task('default', ['preview']);
+
+// Builds the bootstrap theme. Minifies CSS and JS.
+gulp.task('build', ['less-min', 'js-min']);
 
 gulp.task('watch', function () {
   gulp.watch(Paths.LESS, ['less-min']);
   gulp.watch(Paths.JS,   ['js-min']);
 });
 
-gulp.task('docs', ['server'], function () {
+gulp.task('preview', ['server'], function () {
   gulp.src(__filename)
-    .pipe(open({uri: 'http://localhost:9001/docs/'}));
+    .pipe(open({uri: 'http://localhost:9001/'}));
 });
 
 gulp.task('server', function () {
   connect.server({
-    root: 'docs',
+    root: '',
     port: 9001,
     livereload: true
   });
+});
+
+gulp.task('publish-preview', ['copy','publish-server'], function () {
+  gulp.src(__filename)
+    .pipe(open({uri: 'http://localhost:9001/'}));
+});
+
+gulp.task('publish-server', function () {
+  connect.server({
+    root: 'public',
+    port: 9001,
+    livereload: true
+  });
+});
+
+gulp.task('copy',['copydist'], function() {
+  return gulp.src(Paths.FILES)
+    .pipe(gulp.dest(Paths.DEPLOY));
+});
+
+gulp.task('copydist', function() {
+  return gulp.src(Paths.DIST + '/**')
+    .pipe(gulp.dest(Paths.DIST_DEPLOY));
+});
+
+gulp.task('publish', ['copy'], function() {
+  var aws = JSON.parse(fs.readFileSync('./aws.json'));
+  return gulp.src(Paths.DEPLOY + '/**')
+    .pipe(s3(aws));
 });
 
 gulp.task('less', function () {

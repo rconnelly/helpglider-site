@@ -10,7 +10,7 @@
 
     <!-- Include the CSS -->
     <link href="dist/toolkit-startup.css" rel="stylesheet">
-
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -38,7 +38,10 @@
                         <a href="#">Features</a>
                     </li>
                     <li >
-                        <a href="#">Pricing</a>
+                        <a href="#pricing">Pricing</a>
+                    </li>
+                    <li >
+                        <a href="#">Blog</a>
                     </li>
                     <li >
                         <a href="#">Sign In</a>
@@ -53,19 +56,24 @@
 
         <!-- img class="app-graph" src="img/startup-0.svg" -->
 
-        <div class="block-xs-middle p-b-lg" data-transition="entrance" style="transform: scale(.9,.9);">
+        <div class="block-xs-middle p-b-lg" data-transition="entrance" style="transform: scale(.8,.8);">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-10 col-md-6">
-                        <h1 class="block-title m-b-sm">Less Support Tickets. Happier Customers.</h1>
+                    <div class="col-sm-5 col-md-6">
+                        <h1 class="block-title m-b-sm">Provide an amazing customer experience<br />at <u>scale</u>.</h1>
                         <p class="lead m-b-md text-muted">Receive less inbound support tickets by directing customers to the right help documentation when they need it.</p>
                         <a href="#contact-guard" class="btn btn-primary btn-lg" role="button">Learn More</a>
+                    </div>
+                    <div class="col-sm-5 col-sm-push-7">
+                        <img src="http://placehold.it/500x370">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <div class="block block-secondary app-iphone-block" id="contact-guard">
     <div class="container">
@@ -120,7 +128,8 @@
     </div>
 </div>
 
-<div class="block block-secondary app-iphone-block">
+
+<div class="block block-secondary app-iphone-block" id="knowledgebase">
     <div class="container">
         <div class="row app-align-center">
 
@@ -128,16 +137,48 @@
                 <img src="http://placehold.it/460x360">
             </div>
 
-            <div class="col-sm-6 col-sm-offset-1">
-                <h6 class="text-muted text-uppercase">Managed Support Time</h6>
-
-                <h3 class="m-t-0">Live Chat Integration</h3>
-                <p class="lead m-b-md">The rise of real time web support has been great for customer interaction but has increased
-                    support costs for businesses. Require users to search documentation before interacting with
-                    your team. Limit support to customers who really need the human interaction.</p>
+            <div class="col-sm-6 col-sm-offset-1" data-transition="entrance" style="transform: translateX(200px)">
+                <h6 class="text-muted text-uppercase">User-Friendly Knowledge Base</h6>
+                <h3 class="m-t-0">Create a knowledge base that people actually want to use.</h3>
+                <p class="lead m-b-md">Generate content or import articles from several popular help desk products.
+                    Create article stubs.
+                </p>
+                <div class="row hidden-sm">
+                    <div class="col-sm-6 m-b-md">
+                        <h5 class="m-y-0">Reduce Support Tickets by 40%</h5>
+                        <p>Reduce your support time on commonly asked questions. Focus on the customer that really need your people.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <h5 class="m-y-0">Faster Service for Customers</h5>
+                        <p>Ensure the best possible service, but answering questions automatically.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
+    </div>
+</div>
+
+<div class="block block-inverse block-secondary app-code-block">
+    <div class="container">
+        <div class="row app-align-center">
+            <div class="col-sm-5 col-sm-push-7">
+                <img src="http://placehold.it/500x370">
+            </div>
+
+            <div class="col-sm-6 col-sm-pull-5" data-transition="entrance" style="transform: translateX(-200px)">
+                <h6 class="text-muted text-uppercase">Managed Human Support Time</h6>
+                <h3 class="m-t-0">Integrate with live chat.</h3>
+                <p class="lead m-b-md text-muted">
+                    The rise of real time web support has been great for customer interaction but has increased
+                    support costs for businesses. Require users to search documentation before interacting with
+                    your team. Limit support to customers who really need the human interaction
+                </p>
+                <button class="btn btn-default btn-lg btn-borderless">
+                    Find out more
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -147,7 +188,7 @@
 
         <div class="row m-b-lg">
             <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
-                <h6 class="text-muted text-uppercase">Pricing</h6>
+                <h6 class="text-muted text-uppercase"><a name="pricing">Pricing</a></h6>
                 <h3  class="m-t-0">Simple Subscription Plans</h3>
             </div>
         </div>
@@ -155,9 +196,8 @@
         <div class="row">
             <div class="col-sm-4 p-x m-b-lg">
                 <div class="p-x">
-                    <h6 class="text-muted text-uppercase m-b">Personal</h6>
+                    <h6 class="text-muted text-uppercase m-b">Startup</h6>
                     <img src="http://placehold.it/150x150px" />
-                    <p>Plenty of processing power for any personal projects, big or small.</p>
                 </div>
 
                 <ul class="list-unstyled list-bordered text-left m-y-md">
@@ -175,7 +215,6 @@
                 <div class="p-x">
                     <h6 class="text-muted text-uppercase m-b">Business</h6>
                     <img src="http://placehold.it/150x150px" />
-                    <p>The perfect sized plan for small businesses to get started.</p>
                 </div>
 
                 <ul class="list-unstyled list-bordered text-left m-y-md">
@@ -191,9 +230,8 @@
 
             <div class="col-sm-4 p-x m-b-lg">
                 <div class="p-x">
-                    <h6 class="text-muted text-uppercase m-b">Corporate</h6>
+                    <h6 class="text-muted text-uppercase m-b">Enterprise</h6>
                     <img src="http://placehold.it/150x150px" />
-                    <p>An unlimited plan that will scale infinitely to any size project.</p>
                 </div>
 
                 <ul class="list-unstyled list-bordered text-left m-y-md">
@@ -217,7 +255,6 @@
         <div class="row">
             <div class="col-sm-5 m-b-md">
                 <ul class="list-unstyled list-spaced">
-                    <li class="m-b"><h6 class="text-uppercase">Made in the USA</h6></li>
                     <li class="text-muted">
                         Made with love in Brookhaven, GA.
                     </li>
@@ -258,7 +295,20 @@
 
 
 <!-- Include jQuery (required) and the JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
     <script src="dist/toolkit.min.js"></script>
+
+    <script>
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.href);
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+    </script>
 </body>
 </html>
