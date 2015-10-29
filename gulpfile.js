@@ -17,6 +17,8 @@ var s3 = require("gulp-s3");
 
 var Paths = {
   HERE                 : './',
+  ASSETS               : 'assets/**/**',
+  ASSETS_DEPLOY        : 'public/assets',
   DIST                 : 'dist',
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
   LESS_TOOLKIT_SOURCES : './less/toolkit*',
@@ -39,8 +41,7 @@ var Paths = {
       './js/custom/*'
     ],
   FILES                 : [
-    '*.html',
-    './'
+    '*.html'
   ]
 };
 
@@ -81,14 +82,14 @@ gulp.task('publish-server', function () {
   });
 });
 
-gulp.task('copy',['copydist'], function() {
+gulp.task('copy',['copy-assets'], function() {
   return gulp.src(Paths.FILES)
     .pipe(gulp.dest(Paths.DEPLOY));
 });
 
-gulp.task('copydist', function() {
-  return gulp.src(Paths.DIST + '/**')
-    .pipe(gulp.dest(Paths.DIST_DEPLOY));
+gulp.task('copy-assets', function() {
+  return gulp.src(Paths.ASSETS + '/**')
+    .pipe(gulp.dest(Paths.ASSETS_DEPLOY));
 });
 
 gulp.task('publish', ['copy'], function() {

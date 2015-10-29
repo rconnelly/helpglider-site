@@ -9,10 +9,34 @@
     <title>HelpGlider - Better Self-Service Customer Support</title>
 
     <!-- Include the CSS -->
-    <link href="dist/toolkit-startup.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link href="assets/css/toolkit-startup.css" rel="stylesheet">
+    <link href="assets/css/application-startup.css" rel="stylesheet">
+
 </head>
 <body>
+
+<div class="stage-shelf stage-shelf-right hidden" id="sidebar">
+    <ul class="nav nav-bordered nav-stacked">
+        <li >
+            <a href="features" >Features</a>
+        </li>
+        <li >
+            <a href="#pricing">Pricing</a>
+        </li>
+        <li >
+            <a href="#">Blog</a>
+        </li>
+        <li >
+            <a href="#" class="btn-default-outline">Sign Up</a>
+        </li>
+
+        <li >
+            <a href="#">Log In</a>
+        </li>
+    </ul>
+</div>
+
 
 <div class="stage" id="stage">
 
@@ -35,13 +59,20 @@
             <div class="navbar-collapse collapse text-uppercase">
                 <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a href="#">Features</a>
+                        <a href="features">Features</a>
                     </li>
                     <li >
-                        <a href="#">Pricing</a>
+                        <a href="#pricing">Pricing</a>
                     </li>
                     <li >
-                        <a href="#">Sign In</a>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li >
+                        <a href="#">Sign Up</a>
+                    </li>
+
+                    <li >
+                        <a href="#">Log In</a>
                     </li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -53,39 +84,44 @@
 
         <!-- img class="app-graph" src="img/startup-0.svg" -->
 
-        <div class="block-xs-middle p-b-lg" data-transition="entrance" style="transform: scale(.9,.9);">
+        <div class="block-xs-middle p-b-lg" data-transition="entrance" style="transform: scale(.5,.5);">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-10 col-md-6">
-                        <h1 class="block-title m-b-sm">Provide an amazing customer experience<br />at <u>scale</u>.</h1>
-                        <p class="lead m-b-md text-muted">Receive less inbound support tickets by directing customers to the right help documentation when they need it.</p>
-                        <a href="#contact-guard" class="btn btn-primary btn-lg" role="button">Learn More</a>
+                        <h1 class="block-title m-b-sm"><u>Scale</u> your customer service.</h1>
+                        <p class="lead m-b-md text-muted">Help your customers find the right answer without
+                            creating support tickets.</p>
+                        <a href="#contact-guard" class="btn btn-primary btn-lg" role="button">Sign Up</a><br />
+                        <span class="text-muted">No credit card required.</span>
                     </div>
                 </div>
             </div>
+            <a class="a wr"></a>
         </div>
+
     </div>
-</div>
 
 
-
-<div class="block block-secondary app-iphone-block" id="contact-guard">
+<div class="block block-secondary" id="contact-guard">
     <div class="container">
         <div class="row app-align-center">
 
             <div class="col-sm-5 hidden-xs">
-                <img src="http://placehold.it/460x360">
+                <img src="http://placehold.it/460x360" class="img-responsive">
             </div>
 
-            <div class="col-sm-6 col-sm-offset-1" data-transition="entrance" style="transform: translateX(200px)">
+            <div class="col-sm-6 col-sm-offset-1">
                 <h6 class="text-muted text-uppercase">Intelligent Contact Form</h6>
                 <h3 class="m-t-0">Guard Your Contact Form</h3>
-                <p class="lead m-b-md">Allow customers to search support documentation first before submitting tickets to your help desk.
-                    Make customers happier by providing the answer faster through self help rather than having to wait for a response to a ticket.</p>
+                <p class="lead m-b-md">Allow customers to search support documentation first before submitting tickets
+                    to your help desk.
+                    Make customers happier by providing the answer faster through self help rather than having to wait
+                    for a response to a ticket.</p>
                 <div class="row hidden-sm">
                     <div class="col-sm-6 m-b-md">
                         <h5 class="m-y-0">Reduce Support Tickets by 40%</h5>
-                        <p>Reduce your support time on commonly asked questions. Focus on the customer that really need your people.</p>
+                        <p>Reduce your support time on commonly asked questions. Focus on the customer that really need
+                            your people.</p>
                     </div>
                     <div class="col-sm-6">
                         <h5 class="m-y-0">Faster Service for Customers</h5>
@@ -102,13 +138,14 @@
 <div class="block block-inverse block-secondary app-code-block">
     <div class="container">
         <div class="row app-align-center">
-            <div class="col-sm-5 col-sm-push-7">
-                <img src="http://placehold.it/500x370">
+            <div class="col-sm-5 col-sm-push-7  hidden-xs">
+                <img src="http://placehold.it/500x370" class="img-responsive">
             </div>
 
-            <div class="col-sm-6 col-sm-pull-5" data-transition="entrance" style="transform: translateX(-200px)">
+            <div class="col-sm-6 col-sm-pull-5">
+                <div data-transition="entrance" style="transform: scale(.5,.5);">
                 <h6 class="text-muted text-uppercase">Support Analytics</h6>
-                <h3 class="m-t-0">What get's measured, gets improved.</h3>
+                <h3 class="m-t-0">What gets measured, gets improved.</h3>
                 <p class="lead m-b-md text-muted">
                     Improve your support documentation by tracking customer’s keyword searches. Discover when the
                     answer is not published and customers create support tickets. Curate search results based on
@@ -118,20 +155,21 @@
                     Find out more
                 </button>
             </div>
+            </div>
         </div>
     </div>
 </div>
 
 
-<div class="block block-secondary app-iphone-block" id="knowledgebase">
+<div class="block block-secondary" id="knowledgebase">
     <div class="container">
         <div class="row app-align-center">
 
             <div class="col-sm-5 hidden-xs">
-                <img src="http://placehold.it/460x360">
+                <img src="http://placehold.it/460x360" class="img-responsive">
             </div>
 
-            <div class="col-sm-6 col-sm-offset-1" data-transition="entrance" style="transform: translateX(200px)">
+            <div class="col-sm-6 col-sm-offset-1">
                 <h6 class="text-muted text-uppercase">User-Friendly Knowledge Base</h6>
                 <h3 class="m-t-0">Create a knowledge base that people actually want to use.</h3>
                 <p class="lead m-b-md">Generate content or import articles from several popular help desk products.
@@ -153,15 +191,14 @@
     </div>
 </div>
 
-
 <div class="block block-inverse block-secondary app-code-block">
     <div class="container">
         <div class="row app-align-center">
-            <div class="col-sm-5 col-sm-push-7">
-                <img src="http://placehold.it/500x370">
+            <div class="col-sm-5 col-sm-push-7 hidden-xs">
+                <img src="http://placehold.it/500x370" class="img-responsive">
             </div>
 
-            <div class="col-sm-6 col-sm-pull-5" data-transition="entrance" style="transform: translateX(-200px)">
+            <div class="col-sm-6 col-sm-pull-5">
                 <h6 class="text-muted text-uppercase">Managed Human Support Time</h6>
                 <h3 class="m-t-0">Integrate with live chat.</h3>
                 <p class="lead m-b-md text-muted">
@@ -177,8 +214,7 @@
     </div>
 </div>
 
-
-<div class="block app-price-plans" style="background-color: #F4F5F6;">
+<div class="block app-price-plans" style="background-color: #F4F5F6;" id="pricing">
     <div class="container text-center">
 
         <div class="row m-b-lg">
@@ -192,7 +228,7 @@
             <div class="col-sm-4 p-x m-b-lg">
                 <div class="p-x">
                     <h6 class="text-muted text-uppercase m-b">Startup</h6>
-                    <img src="http://placehold.it/150x150px" />
+                    <img src="http://placehold.it/150x150px" class="img-responsive" />
                 </div>
 
                 <ul class="list-unstyled list-bordered text-left m-y-md">
@@ -209,7 +245,7 @@
             <div class="col-sm-4 p-x m-b-lg">
                 <div class="p-x">
                     <h6 class="text-muted text-uppercase m-b">Business</h6>
-                    <img src="http://placehold.it/150x150px" />
+                    <img src="http://placehold.it/150x150px" class="img-responsive" />
                 </div>
 
                 <ul class="list-unstyled list-bordered text-left m-y-md">
@@ -226,7 +262,7 @@
             <div class="col-sm-4 p-x m-b-lg">
                 <div class="p-x">
                     <h6 class="text-muted text-uppercase m-b">Enterprise</h6>
-                    <img src="http://placehold.it/150x150px" />
+                    <img src="http://placehold.it/150x150px" class="img-responsive" />
                 </div>
 
                 <ul class="list-unstyled list-bordered text-left m-y-md">
@@ -291,7 +327,21 @@
 
 <!-- Include jQuery (required) and the JS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
-    <script src="dist/toolkit.min.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/toolkit.min.js"></script>
+
+    <script type="text/javascript">
+        /*$('a[href^="#"]').on('click', function(event) {
+            var target = $( $(this).attr('href') );
+            if( target.length ) {
+                event.preventDefault();
+                $('#sidebar').stage('toggle');
+                $('html, body').animate({
+                    scrollTop: target.offset().top - parseInt(target.css('padding-top'))
+                }, 1000);
+            }
+        });*/
+
+    </script>
 </body>
 </html>
